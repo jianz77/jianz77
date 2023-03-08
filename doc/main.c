@@ -28,3 +28,10 @@ int *Bubble_Sort(int *ptr,int size){
     return ptr;
     
 }
+
+Solution {
+public:
+    int search(vector<int>& nums, int target) {
+
+    }
+};
