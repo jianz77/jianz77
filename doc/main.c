@@ -35,3 +35,16 @@ public:
 
     }
 };
+
+   public int search(int[] nums, int target) {
+        int l = 0, r = nums.length;
+        while(1 < r -l){
+            int m = (l + r) >>>1;
+            if(nums[m]  > target){
+                r = m;
+            }else{
+                l = m;
+            }
+        }
+        return nums[l] == target ? l : -1;
+    }
