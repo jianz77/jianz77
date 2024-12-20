@@ -1,0 +1,9 @@
+设备安装插件包 测网包/公网包 
+网约模式/售卖模式   触发任一VAE事件/弹外事件/弹内事件
+设备连接Charles抓包
+查看/ws/rbs/ae/v1/task/pull接口请求上报的header内installType字段
+预期：
+1、header添加 installType
+2、installType字段值 1
+
+mock photo/mock gps

@@ -43,3 +43,21 @@ SophonRegister注册请求 = http://collection-bullet.amap.test/app/register
 
 ● 有类似如下输出即表示mock成功
   ○ mock camera putCameraImage,ts=1676623510290016, size=(1280, 960) file=/storage/ext4_sdcard/Android/data/com.sophon/files/sophon/mock/camera/2/photo_001.jpg
+
+  7.清空alc日志
+命令:adb shell rm -rf /storage/sdcard1/sophon/alc/
+
+
+1、https://aliyuque.antfin.com/du59lx/hlcc7n/qy60yv                    ADB命令汇总
+
+2、https://aliyuque.antfin.com/mebsf2/vmfg0b/go0fge?#a37YK    弹外事件
+
+3、https://aliyuque.antfin.com/mebsf2/vmfg0b/qen9ck?#acIp6     指令任务设计
+
+4、https://delivery.litongcx.com/iteration/webpack#19999            苍穹平台（打包用）
+
+5、https://aone.alibaba-inc.com                                                      anone平台需求与提BUG
+
+6、https://mail.alibaba-inc.com                                                       企业邮箱
+
+7、https://aliyuque.antfin.com/lcg01733115/kb/ro333yrorc76hrgx    VAE事件触发条件 语雀
