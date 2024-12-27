@@ -12,3 +12,20 @@ b、app自动化：一般是使用python+appuim对移动端进行ui自动化脚�
 2、性能测试工具：jmeter
 
 使用jmeter对系统进行性能测试，对系统进行压力测试、负载测试、稳定性测试等
+
+面试的时候会问的问题：
+#为什么要做接口测试？
+接口的由来,连接前后端以及移动端。
+因为不同端的工作进度不一样，所以需要对开始出来的接口进行接口测试。
+#Postman简介
+Postman是一个可扩展的API开发和测试协同平台工具，可以快速集成到CI/CD管道中。旨在简化测试和开发中的API工作流。
+Postman 工具有 Chrome 扩展和独立客户端，推荐安装独立客户端。
+Postman 有个 workspace 的概念，workspace 分 personal 和 team 类型。Personal workspace 只能自己查看的 API，Team workspace 可添加成员和设置成员权限，成员之间可共同管理 API。
+什么是接口  
+硬件：usb接口
+软件：API  微信提现接口 函数 
+    内部接口：开发内部系统提供数据交互
+    外部接口：
+ mock server
+
+鉴权 token key 

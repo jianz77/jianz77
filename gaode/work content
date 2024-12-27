@@ -8,3 +8,29 @@
 
 mock photo/mock gps
 
+VAE算法识别任务
+定时任务，任务type=1。
+参数名	参数定义	参数类型	参数取值	备注
+间隔	interval	int64	默认值：	单位：秒
+超时时间	timeout	int64	默认值：	单位：秒
+任务参数	args	string	JSON字符串，可扩展	
+以下是args参数对象的二级属性，可扩展
+输入频率	input	int64	默认：	单位：秒
+计算频率	compute	int64	默认：	单位：秒
+置信度阈值	confidence	int64	默认：	
+连续次数	serialTimes	int	默认：	
+干预类型	interveneType	int	1：语音播报；	
+干预文案	interveneText	string		
+干预疲劳度	interveneFatigue	int64	默认：	
+闭眼时长统计周期1	eyeCloseTime1	int	默认：10	单位：秒
+闭眼时长统计周期2	eyeCloseTime2	int	默认：60	单位：秒
+闭眼输出频率	eyeCloseOutFrequency	int	默认：10	单位：秒
+低头时长统计周期1	headDownTime1	int	默认：6	单位：秒
+低头时长统计周期2	headDownTime2	int	默认：60	单位：秒
+低头输出频率	headDownOutFrequency	int	默认：60	单位：秒
+低头阈值	headDownRate	int	默认:  50	
+遮挡时间	occlusionTime	int	默认：600	单位：秒
+模型特征上传开关	enable101	int	默认：0	0不上传，1上传
+enable201	int	默认：0	0不上传，1上传
+
+路测vae算法播报
