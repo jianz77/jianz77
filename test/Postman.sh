@@ -132,6 +132,5 @@ postman内置的动态参数无法做断言，所以必须使用自定义的动�
 pm.globals.("golbals_variable")
 globals.["golbals_variable"]
 globals.golbals_variable
-————————————————
 
 
