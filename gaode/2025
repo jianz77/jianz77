@@ -1,0 +1,63 @@
+#写一个测试脚本：测试导航准确性
+#!/usr/bin/env bats
+
+# Load the script to be tested
+load '../2025'
+
+# Test the emulate_bats_env function
+@test "emulate_bats_env sets environment variables correctly" {
+    run emulate_bats_env
+    [ "$BATS_CWD" = "$PWD" ]
+    [ "$BATS_ROOT_PID" -eq "$$" ]
+    [ -d "$BATS_RUN_TMPDIR" ]
+    [ "$BATS_LINE_REFERENCE_FORMAT" = "comma_line" ]
+    [ "$BATS_BEGIN_CODE_QUOTE" = "`" ]
+    [ "$BATS_END_CODE_QUOTE" = "'" ]
+    [ "$BATS_CODE_QUOTE_STYLE" = "\`'" ]
+}
+
+# Test the fixtures function
+@test "fixtures sets fixture paths correctly" {
+    BATS_TEST_DIRNAME="/tmp"
+    BATS_CWD="/home/user"
+    BATS_ROOT="/home/user"
+    fixtures "test_fixture"
+    [ "$FIXTURE_ROOT" = "/tmp/fixtures/test_fixture" ]
+    [ "$RELATIVE_FIXTURE_ROOT" = "tmp/fixtures/test_fixture" ]
+    [ "$RELATIVE_BATS_ROOT" = "" ]
+}
+
+# Test the filter_control_sequences function
+@test "filter_control_sequences removes control sequences" {
+    result=$(echo -e "Hello\x1b[31m World" | filter_control_sequences cat)
+    [ "$result" = "Hello World" ]
+}
+
+# Test the tput function override
+@test "tput function override returns 1000" {
+    run tput
+    [ "$output" = "1000" ]
+}
+
+# Test the emit_debug_output function
+@test "emit_debug_output prints debug output" {
+    output="test output"
+    run emit_debug_output
+    [ "$output" = "output: test output" ]
+}
+
+# Test the execute_with_unset_bats_vars function
+@test "execute_with_unset_bats_vars unsets BATS_* variables" {
+    BATS_TEST_VAR="test"
+    REENTRANT_RUN_PRESERVE=("BATS_TEST_VAR")
+    run execute_with_unset_bats_vars env
+    [ -z "$(echo "$output" | grep BATS_)" ]
+}
+
+# Test the reentrant_run function
+@test "reentrant_run executes command with BATS_* variables purged" {
+    BATS_TEST_VAR="test"
+    REENTRANT_RUN_PRESERVE=("BATS_TEST_VAR")
+    run reentrant_run echo "Hello World"
+    [ "$output" = "Hello World" ]
+}
