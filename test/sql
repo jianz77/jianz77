@@ -1,0 +1,46 @@
+INSERT INTO `driver_safety_mapping_info_new` (`driver_unique_id`,`bg_cert_no`,`driver_mobile`,`driver_name`,`license_plate`,`driver_type`,`sp_channel`,`cp_code`,`capacity_type`,`source`,`bg_date_first`,`driver_risk`,`driver_risk_type`,`risk_ext`,`witness`,`car_license`,`last_driver_risk_type`,`last_driver_risk`,`last_time`,`gmt_create`,`gmt_modified`) 
+  VALUES 
+  ('yueyue_677b4facb9ea401496b011c4','bek9AULXdhge+qinmiNoEdmK7LyJ2KYUulXzXnJTCvs=','18801114871','李文竹','京QA14871',null,null,'1111',2,'二环','2024-07-05 10:58:00','pass',null,'',0,0,null,'pass','2024-07-05 13:47:04','2024-07-05 10:58:00','2024-07-05 13:57:04');
+
+方法 1：查询整张表的最新数据
+
+如果表中有时间戳字段（如 gmt_create 或 gmt_modified），可以按时间排序查看最新记录：
+#增
+SELECT * 
+FROM driver_safety_mapping_info_new
+ORDER BY gmt_create DESC
+LIMIT 10;
+
+	•	说明：
+	•	ORDER BY gmt_create DESC：按创建时间降序排列。
+	•	LIMIT 10：只显示最近的 10 条记录。
+
+方法 2：按主键或唯一标识查询
+
+如果你知道插入时使用的主键或唯一字段（如 driver_unique_id），可以直接查找该记录：
+#查
+SELECT * 
+FROM driver_safety_mapping_info_new
+WHERE driver_unique_id = 'yueyue_677b4facb9ea401496b011c4';
+
+使用插入时的唯一字段（如 driver_unique_id）来删除：
+#删
+DELETE FROM driver_safety_mapping_info_new
+WHERE driver_unique_id = 'yueyue_677b4facb9ea401496b011c4';
+
+确保删除正确记录
+
+在执行 DELETE 前，建议先用 SELECT 确认删除的记录是否正确：
+
+SELECT * 
+FROM driver_safety_mapping_info_new
+WHERE driver_unique_id = 'yueyue_677b4facb9ea401496b011c4';
+
+#改
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+	•	table_name：表名。
+	•	SET：指定需要修改的字段及其新值。
+	•	WHERE：条件，用于确定修改哪些行。
