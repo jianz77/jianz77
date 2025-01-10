@@ -44,3 +44,14 @@ WHERE condition;
 	•	table_name：表名。
 	•	SET：指定需要修改的字段及其新值。
 	•	WHERE：条件，用于确定修改哪些行。
+
+连接到数据库服务器：在执行任何SQL命令之前，您需要连接到数据库服务器。这通常通过一个数据库管理工具（如MySQL Workbench、phpMyAdmin）或命令行完成。
+
+创建数据库：使用CREATE DATABASE语句来创建一个新的数据库。
+
+CREATE DATABASE  ZJ
+
+创建表
+选择数据库：在创建表之前，您需要选择要在哪个数据库中创建表。使用USE语句来选择数据库。
+
+USE ZJ
