@@ -9,6 +9,10 @@ adb push  XXX  /data/data/com.sophon/app_module/install/so/
 adb shell am force-stop com.sophon
 4. 重启设备:adb reboot 
 
+测网包：test_daily  debug
+公网包：test_public
+正式包：release_public
+
 二、安装sophon包
 1.进入插件包所在文件夹如D:ZJ
 cd D:\ZR  cd D:  cd D:\ZR 
