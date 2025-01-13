@@ -1,12 +1,10 @@
-一、安装插件包
+一、安装plugin包
 1.进入插件包所在文件夹 如D:ZJ
 D: cd ZJ
-2.安装
-
 adb push  XXX  /data/data/com.sophon/app_module/update/UpdateSophon.apk
-adb push  XXX  /data/data/com.sophon/app_module/install/so/
+adb push  XXX  /data/data/com.sophon/app_module/install/so
 3.安装后,杀死进程重启等待1-2分,正式包安装3分钟后再杀进程
-adb shell am force-stop com.sophon
+a
 4. 重启设备:adb reboot 
 
 测网包：test_daily  debug
