@@ -4,7 +4,7 @@ D: cd ZJ
 adb push  XXX  /data/data/com.sophon/app_module/update/UpdateSophon.apk
 adb push  XXX  /data/data/com.sophon/app_module/install/so
 3.安装后,杀死进程重启等待1-2分,正式包安装3分钟后再杀进程
-a
+adb shell am force-stop com.sophon
 4. 重启设备:adb reboot 
 
 测网包：test_daily  debug
