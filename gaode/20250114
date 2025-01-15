@@ -1,0 +1,9 @@
+adb shell adb_auth.sh
+GAOTIEV3
+
+查看文件替换是否成功
+certutil -hashfile D:\ZJ\zj\libVAEngine.so MD5
+adb shell md5sum /data/data/com.sophon/app_module/install/so/libVAEngine.so
+
+清空alc日志
+adb shell rm -rf /storage/sdcard1/sophon/alc/
