@@ -5,7 +5,7 @@ INSERT INTO `driver_safety_mapping_info_new` (`driver_unique_id`,`bg_cert_no`,`d
 方法 1：查询整张表的最新数据
 
 如果表中有时间戳字段（如 gmt_create 或 gmt_modified），可以按时间排序查看最新记录：
-#增
+
 SELECT * 
 FROM driver_safety_mapping_info_new
 ORDER BY gmt_create DESC
@@ -55,3 +55,23 @@ CREATE DATABASE  ZJ
 选择数据库：在创建表之前，您需要选择要在哪个数据库中创建表。使用USE语句来选择数据库。
 
 USE ZJ
+
+-- 建议为sid添加主键约束，并修正INSERT语句的值
+CREATE TABLE zj(
+    sid CHAR(6) PRIMARY KEY,
+    sname VARCHAR(20),
+    age INT,
+    gender ENUM('Male', 'Female') -- 使用ENUM限制性别值
+);
+
+-- 正确的INSERT操作
+INSERT INTO zj(sid, sname, age, gender)
+VALUES ('40', '张三', 20, 'Male');
+
+-- 更新操作添加条件
+UPDATE zj SET sid = 66 WHERE sid = '40';
+
+
+查询性别为女，并且年龄小于 50 的记录
+SELECT * FROM stu
+WHERE gender='female' AND age<50;

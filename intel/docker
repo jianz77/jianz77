@@ -1,1 +1,77 @@
-d
+以下是一些常用的 Docker 命令和使用方法：
+
+安装 Docker
+在 Windows 上，你可以从 Docker 官方网站 下载并安装 Docker Desktop。
+
+基本命令
+# 查看 Docker 版本
+docker --version
+
+# 拉取镜像
+docker pull <image_name>
+
+# 列出本地镜像
+docker images
+
+# 运行容器
+docker run -d --name <container_name> <image_name>
+
+# 列出运行中的容器
+docker ps
+
+# 列出所有容器（包括停止的）
+docker ps -a
+
+# 停止容器
+docker stop <container_id>
+
+# 启动容器
+docker start <container_id>
+
+# 删除容器
+docker rm <container_id>
+
+# 删除镜像
+docker rmi <image_id>
+
+# 查看容器日志
+docker logs <container_id>
+
+# 进入运行中的容器
+docker exec -it <container_id> /bin/bash
+
+# 构建镜像
+docker build -t <image_name> .
+
+# 查看 Docker 系统信息
+docker info
+
+Dockerfile 示例
+创建一个名为 Dockerfile 的文件，并添加以下内容：
+# 使用官方的 Node.js 镜像作为基础镜像
+FROM node:14
+
+# 创建应用目录
+WORKDIR /usr/src/app
+
+# 复制 package.json 和 package-lock.json
+COPY package*.json ./
+
+# 安装依赖
+RUN npm install
+
+# 复制应用代码
+COPY . .
+
+# 暴露应用运行的端口
+EXPOSE 8080
+
+# 启动应用
+CMD ["node", "app.js"]
+
+构建和运行 Docker 镜像
+# 构建镜像
+docker build -t <image_name> .
+
+# 运行容器
+docker run -d -p 8080:8080 --name <container_name> <image_name>

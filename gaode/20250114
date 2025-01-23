@@ -6,5 +6,7 @@ certutil -hashfile D:\ZJ\zj\libVAEngine.so MD5
 adb shell md5sum /data/data/com.sophon/app_module/install/so/libVAEngine.so
 
 清空alc日志
-adb shell rm -rf /storage/sdcard1/sophon/alc/、
+adb shell rm -rf /storage/sdcard1/sophon/alc/
+
+studio     公网包不用连接wifi    新的apk包先下载安装后在进行停止命令操作   mcok 前车刹车图片 mcok1 adas图片  mock2 肢体接触图片
 
