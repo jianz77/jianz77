@@ -70,3 +70,8 @@ VALUES ('40', '张三', 20, 'Male');
 
 -- 更新操作添加条件
 UPDATE zj SET sid = 66 WHERE sid = '40';
+
+
+查询性别为女，并且年龄小于 50 的记录
+SELECT * FROM stu
+WHERE gender='female' AND age<50;
