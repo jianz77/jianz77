@@ -1,0 +1,48 @@
+public class SecretLove2025 {
+
+    public static void main(String[] args) throws InterruptedException {
+        final String[] HEART = {
+            "\u001B[31m", // ANSI红色
+            "  ██████████    ██████████  ",
+            "████████████████████████████",
+            "████████████████████████████",
+            " ██████████████████████████ ",
+            "  ██████ 2025love ██████  ",
+            "    ████████████████████    ",
+            "      ████████████████      ",
+            "        ████████████        ",
+            "          ████████          ",
+            "            ████            ",
+            "\u001B[0m" // 重置颜色
+        };
+
+        // ANSI颜色代码数组 (红/紫/粉)
+        final String[] COLORS = {
+            "\u001B[31m",  // 红
+            "\u001B[35m",  // 紫
+            "\u001B[95m"   // 亮粉
+        };
+
+        // 清屏指令
+        final String CLEAR = "\033[H\033[2J";
+
+        // 动态颜色变化
+        int colorIndex = 0;
+        while (true) {
+            System.out.print(CLEAR); // 清屏
+            
+            // 构建动态爱心
+            StringBuilder heartBuilder = new StringBuilder();
+            for (int i = 0; i < HEART.length; i++) {
+                if (i == 0) {
+                    heartBuilder.append(COLORS[colorIndex % 3]); // 动态颜色
+                }
+                heartBuilder.append(HEART[i]).append("\n");
+            }
+            
+            System.out.println(heartBuilder);
+            colorIndex++;
+            Thread.sleep(500); // 颜色变化间隔
+        }
+    }
+}

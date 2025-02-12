@@ -1,0 +1,5 @@
+大的是高铁V1  小的是高铁V2
+
+首次使用输入：adb connect 192.168.55.1:60055 连接设备  再用adb devices 查看设备
+如果还是连接不上用adb shell am force-stop com.sophon 杀一下进程 在重新安装APK
+高铁V1 视频录制路径：/storage/ext4_sdcard/Android/data/com.sophon/files/sophon/video/in

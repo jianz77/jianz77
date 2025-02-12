@@ -1,0 +1,18 @@
+SN号-RC129GD122030122 在Xmind上查看  每次重新打开studio时需要先调整日志大小，然后停止应用    搜索注册关键字 success= http://collection-bullet.amap.test/app/register   test为测网（注意如果刷没了 杀一下进程）
+！！！！！！！！！！！！！！！安装不上APK包的时候记得adb root！！！！！！！！！！！！！！！！
+锐承路径：/storage/5E84-0FDA/sophon/
+锐承mock路径：adb push mock  /storage/5E84-0FDA/sophon/mock/camera/
+锐承查看内摄：cd /storage/5E84-0FDA/sophon/video/in
+导出 alc日志：adb pull /storage/5E84-0FDA/sophon/alc ./
+清空alc日志：adb shell rm -rf /storage/5E84-0FDA/sophon/alc/
+
+1、VAE安全带事件（每个版本Xmind中）
+操作步骤：先调整日志大小，然后停止应用看classid（注意日志刷没之后需要重新停止应用才能重新刷新日志）
+2、VAE肢体触碰事件
+操作步骤：mock图片 看下VAE事件code事件有没有上报，云＋端上传失败事件有没有上报（如果没有让李枭雄和郭宇宇看下锐承设备 公网 SN：RC129GD122030122  肢体接触上报云＋端模型有没有上传成功）
+3、VAE交通事故事件
+操作步骤:mock速度到200跑几分钟，然后退出模拟，然后重新选择终点点击模拟此定位到终点，等待4-5分钟
+4、VAE司机分神事件
+操作步骤：
+5、查看订单状态任务
+操作步骤：绑定司机端（需要注意是测网的司机端，还是公网的司机端），下发线上订单

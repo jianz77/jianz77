@@ -1,0 +1,86 @@
+adb  每天早上都先清空一下日志   除了掌瑞的设备以外 其他的设备需要在studio工具中选择com.sophon 和 show only selected application 进行日志的查看   ！！！！！正式包没有日志 ！！！！！！ 也没有sophon日志！！！！！！！！！
+-----------------------------
+1.进入D盘
+命令：D：
+2.查看设备连接     SN号：YY10S2321501483   庆哥的：SN：YY10S22C2101269
+命令：adb devices
+3.装plugin包
+命令：adb push 新版本apk包  /data/data/com.sophon/app_module/update/UpdateSophon.apk
+4.停止应用
+命令：adb shell am force-stop com.sophon
+5.重启
+命令：先操作4后操作3
+6.退出
+命令：exit
+7.清空alc日志
+命令：adb shell rm -rf /storage/sdcard1/sophon/alc/
+8.安装应用
+命令：adb install  （-r -d 强制安装）（后面是把下载好的apk拖拽过去）
+9.查看目录/ -la查看目录中隐藏文件
+命令：ls -la
+10.导入
+命令：adb push
+11.导出
+命令：pull
+12.外摄路径
+命令：/storage/sdcard1/sophon//video/out
+13.内设路径
+命令：/storage/sdcard1/sophon//video/in          高铁内摄路径：/storage/ext4_sdcard/Android/data/com.sophon/files/sophon/video/in
+锐承内摄路径： /storage/5E84-0FDA/sophon/video/in/
+14.导出日志到设备路径
+命令：/storage/sdcard1/sophon/ 
+15.进入android系统
+命令：adb shell
+16.创建文件夹
+命令：mkdir 想要创建的文件夹名
+17.导出alc日志
+命令：adb pull /storage/sdcard1/sophon/alc ./
+18.查看是否正常录制内摄，外摄（先adb shell进入系统  in是内、out是外）
+命令：cd /storage/sdcard1/sophon/video/in 然后ls -la查看
+19.强制删除路径
+命令：adb shell rm -rf 加路径
+20.查看alc日志是否正常开启
+命令：先adb shell进入系统 然后 cd /storage/sdcard1/sophon/alc/ 然后ls -la查看	
+21.拉回lac目录=导出没有log文件夹时用这个命令
+命令：adb pull /storage/sdcard1/sophon/alc ./
+22.进入mock插入图片路径
+命令：cd  /storage/sdcard1/sophon/mock/camera/
+23.导入mock到路径
+命令：先cd 2  然后导入adb push mock /storage/sdcard1/sophon/mock/camera/
+24.版本回退重新安装host包
+命令：adb install -r -d "sophon_host-zhangrui8665-1005-101300-release .apk"
+25.安装mock gps
+命令：先cd到2目录   然后 adb install -r -d 所在路径   选择设置 点击开发者工具  找到允许模拟位置开启 选择调试应用选择模拟定位
+26.停止导出
+命令：ctrl+c
+27.重启设备
+命令：adb reboot
+28.只拉取一个需要的内摄视频
+命令：adb pull  /storage/sdcard1/sophon/video/in/1687968000000/1688022426575.data .
+29.安装不了APK包的时候
+命令：adb root
+30.调整日志大小
+命令：adb logcat -G 10M
+31.导出崩溃日志
+命令：adb pull /data/data/com.sophon/files/dumpCrash
+32.查看第三种事故日志（傅天宇需要的） mcok速度0 然后晃动后摄 等几分钟看日志 需要下发全任务 DMS,ADAS和VPS  VPS任务就是VAE算法识别任务！
+命令：adb shell  然后  cd /storage/sdcard1/sophon/alc/nlog/ardrive/log
+33.替换SO
+命令：adb push 所下载so的路径 /data/data/com.sophon/app_module/install/so/libVAEngine.so （注意装完SO以后在测试别的，日志有问题就重新装下APK包）
+34：查看文件大小
+命令：du -h
+
+
+studio     公网包不用连接wifi    新的apk包先下载安装后在进行停止命令操作   mcok 前车刹车图片 mcok1 adas图片  mock2 肢体接触图片
+------------------------
+1.查看日志
+命令：android-nlog
+2.拉取指令字段
+命令：asyncCommandPull （3秒）
+3.拉取任务字段
+命令：asynctaskpull(1分钟)
+4.查看速度字段
+命令：speed
+5.测网WLAN：alibaba-inc
+
+
