@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Heart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .heart {
+            font-size: 16px;
+            text-align: center;
+        }
+        .heart div {
+            white-space: pre; /* 保留空格 */
+        }
+    </style>
+</head>
+<body>
+    <div id="heart" class="heart"></div>
+
+    <script>
+        function drawHeart(elementId) {
+            const heart = document.getElementById(elementId);
+            let output = '';
+
+            // 上半部分
+            for (let i = 0; i < 6; i++) {
+                let spaces = ' '.repeat(4 * (6 - i));
+                let stars = '*'.repeat(2 * i + 1);
+                output += `<div>${spaces}${stars}</div>`;
+            }
+
+            // 下半部分
+            for (let i = 0; i < 5; i++) {
+                let spaces = ' '.repeat(4 * i);
+                let stars = '*'.repeat(2 * (5 - i));
+                output += `<div>${spaces}${stars}</div>`;
+            }
+
+            heart.innerHTML = output;
+        }
+
+        // 绘制一个心形
+        drawHeart('heart');
+    </script>
+</body>
+</html>
