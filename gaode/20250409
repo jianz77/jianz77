@@ -42,3 +42,35 @@ try:
 finally:
     # 关闭浏览器
     driver.quit()
+
+
+    ● 围栏信息
+    ○ JT/T808—2013的 表 28
+        ■ AlarmMarkOfTable28{
+            ● mLocationType=
+                ○ 1：圆形区域
+                ○ 2：矩形区域
+                ○ 3：多边形区域
+            ● mAreaId=
+                ○ 配置的围栏Id
+● 进出围栏
+    ○ JT/T808—2013的 表 29
+        ■ AlarmMarkOfTable29{
+            ● mLocationType=
+                ○ 1：圆型区域
+                ○ 2：矩形区域
+                ○ 3：多边形区域
+            ● mAreaId=
+                ○ 配置的围栏Id
+            ● mDirection=
+                ○ 0：进围栏
+                ○ 1：出围栏
+● 超速
+    ○ 808-2013 表24
+        ■ ,mOverSpeed1=
+            ● 0未超速
+            ● 1超速
+    ○ JT/T808—2011的 表 18
+        ■ mAlarmMark1=
+            ● 0未超速
+            ● 1超速
