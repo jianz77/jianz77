@@ -2,7 +2,7 @@
 1.进入插件包所在文件夹 如D:ZJ
 D: cd ZJ
 adb push  XXX  /data/data/com.sophon/app_module/update/UpdateSophon.apk
-adb push  XXX  /data/data/com.sophon/app_module/install/so
+adb push  XXX  /data/data/com.sophon/app_module/install/so/libVAEngine.so 
 3.安装后,杀死进程重启等待1-2分,正式包安装3分钟后再杀进程
 adb shell am force-stop com.sophon
 4. 重启设备:adb reboot 
@@ -11,7 +11,7 @@ adb shell am force-stop com.sophon
 公网包：test_public
 正式包：release_public
 
-二、安装sophon包
+二、安装host包
 1.进入插件包所在文件夹如D:ZJ
 cd D:\ZR  cd D:  cd D:\ZR 
 2.安装
@@ -63,3 +63,5 @@ SophonRegister注册请求 = http://collection-bullet.amap.test/app/register
 6、https://mail.alibaba-inc.com                                                       企业邮箱
 
 7、https://aliyuque.antfin.com/lcg01733115/kb/ro333yrorc76hrgx    VAE事件触发条件 语雀
+
+查看崩溃日志：

@@ -45,7 +45,7 @@ finally:
 
 
     ● 围栏信息
-    ○ JT/T808—2013的 表 28
+    ○ JT/T808—2013的 
         ■ AlarmMarkOfTable28{
             ● mLocationType=
                 ○ 1：圆形区域
@@ -54,7 +54,7 @@ finally:
             ● mAreaId=
                 ○ 配置的围栏Id
 ● 进出围栏
-    ○ JT/T808—2013的 表 29
+    ○ JT/T808—2013
         ■ AlarmMarkOfTable29{
             ● mLocationType=
                 ○ 1：圆型区域
