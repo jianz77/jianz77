@@ -1,0 +1,57 @@
+猎鹰3.0普通版
+√   流量上报事件:EVENT_DEVICE_NETWORK_UPLOAD
+√   设备基础信息上报:EVENT_DEVICE_INFO
+√   设备运行状态上报:EVENT_DEVICE_RUN_STATE
+√   设备点火事件 EVENT_DEVICE_START_UP
+√   设备准备休眠 EVENT_DEVICE_SHUTDOWN_IPO
+√   摄像头启动事件:EVENT_CAMERA_START 前摄 内摄
+√   ACCS链接成功:EVENT_ACCS_CONNECTED
+
+√   VAE口罩识别事件(内置):EVENT_VAE_FACEMASK_IDENTIFY
+√   VAE疲劳驾驶事件(内置):EVENT_VAE_FATIGUE_IDENTIFY
+√   VAE车内人数座次事件(内置):EVENT_VAE_PASSENGERS_CHANGED
+   
+    VAE VPS抓路特征回传(外置) 需要绑定车牌
+    
+    VAE ADAS特征回传(外置)
+√   VAE肢体碰触事件（10.05）(内置) EVENT_VAE_BODY_CONTACT
+√   VAE内摄遮挡事件（10.06）(内置) EVENT_VAE_CAMERA_OCCLUSION
+√   VAE司机分神事件（10.11）(内置) EVENT_VAE_DISTRACTION_IDENTIFY
+    VAE交通事故事件（10.14）(外置)
+√   VAE性别年龄事件（10.14）(内置):EVENT_VAE_GENDER_AGE
+√   VAE安全带事件（10.14）(内置):EVENT_VAE_SEATBELT
+    VAE云模型-肢体碰触事件（2023.5.18）
+    VAE云模型-交通事故事件（2023.5.18）
+    VAE云+端模型上传事件（10.13）
+    VAE云+端模型上传失败事件（10.13）
+    VAE当前订单状态事件（10.13）
+    VAE前车刹车事件上报（10.13）
+
+猎鹰3.0plus版
+√   流量上报事件:EVENT_DEVICE_NETWORK_UPLOAD
+√   设备基础信息上报:EVENT_DEVICE_INFO
+√   设备运行状态上报:EVENT_DEVICE_RUN_STATE
+√   设备点火事件 EVENT_DEVICE_START_UP
+√   设备准备休眠 EVENT_DEVICE_SHUTDOWN_IPO
+√   摄像头启动事件:EVENT_CAMERA_START 前摄 内摄
+√   ACCS链接成功:EVENT_ACCS_CONNECTED
+
+√   VAE口罩识别事件(内置):EVENT_VAE_FACEMASK_IDENTIFY
+    VAE疲劳驾驶事件(内置):EVENT_VAE_FATIGUE_IDENTIFY
+    VAE车内人数座次事件(内置):EVENT_VAE_PASSENGERS_CHANGED
+   
+    VAE VPS抓路特征回传(外置) 需要绑定车牌
+    
+    VAE ADAS特征回传(外置)
+√   VAE肢体碰触事件（10.05）(内置)
+√   VAE内摄遮挡事件（10.06）(内置)  EVENT_VAE_CAMERA_OCCLUSION
+√   VAE司机分神事件（10.11）(内置)  EVENT_VAE_DISTRACTION_IDENTIFY
+    VAE交通事故事件（10.14）(外置)
+√   VAE性别年龄事件（10.14）(内置):EVENT_VAE_GENDER_AGE
+√   VAE安全带事件（10.14）(内置):EVENT_VAE_SEATBELT
+    VAE云模型-肢体碰触事件（2023.5.18）
+    VAE云模型-交通事故事件（2023.5.18）
+    VAE云+端模型上传事件（10.13）
+    VAE云+端模型上传失败事件（10.13）
+    VAE当前订单状态事件（10.13）
+    VAE前车刹车事件上报（10.13）
