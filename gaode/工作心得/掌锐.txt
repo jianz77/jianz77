@@ -34,7 +34,7 @@ adb  每天早上都先清空一下日志   除了掌瑞的设备以外 其他�
 16.创建文件夹
 命令：mkdir 想要创建的文件夹名
 17.导出alc日志
-命令：adb pull /storage/sdcard1/sophon/alc ./
+命令：adb pull /storage/sdcard1/sophon/alc ./ls
 18.查看是否正常录制内摄，外摄（先adb shell进入系统  in是内、out是外）
 命令：cd /storage/sdcard1/sophon/video/in 然后ls -la查看
 19.强制删除路径

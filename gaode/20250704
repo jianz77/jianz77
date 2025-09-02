@@ -1,3 +1,5 @@
+版本 : host公网日志包  插件包为修复图像后的公网包
+
 猎鹰3.0普通版
 √   流量上报事件:EVENT_DEVICE_NETWORK_UPLOAD
 √   设备基础信息上报:EVENT_DEVICE_INFO
@@ -37,8 +39,8 @@
 √   ACCS链接成功:EVENT_ACCS_CONNECTED
 
 √   VAE口罩识别事件(内置):EVENT_VAE_FACEMASK_IDENTIFY
-    VAE疲劳驾驶事件(内置):EVENT_VAE_FATIGUE_IDENTIFY
-    VAE车内人数座次事件(内置):EVENT_VAE_PASSENGERS_CHANGED
+√   VAE疲劳驾驶事件(内置):EVENT_VAE_FATIGUE_IDENTIFY
+√   VAE车内人数座次事件(内置):EVENT_VAE_PASSENGERS_CHANGED
    
     VAE VPS抓路特征回传(外置) 需要绑定车牌
     
