@@ -7,9 +7,9 @@ adb push  XXX  /data/data/com.sophon/app_module/install/so/libVAEngine.so
 adb shell am force-stop com.sophon
 4. 重启设备:adb reboot 
 
-测网包：test_daily  debug
-公网包：test_public
-正式包：release_public
+测网包:test_daily  debug
+公网包:test_public
+正式包:release_public
 
 二、安装host包
 1.进入插件包所在文件夹如D:ZJ
@@ -52,16 +52,16 @@ SophonRegister注册请求 = http://collection-bullet.amap.test/app/register
 
 1、https://aliyuque.antfin.com/du59lx/hlcc7n/qy60yv                    ADB命令汇总
 
-2、https://aliyuque.antfin.com/mebsf2/vmfg0b/go0fge?#a37YK    弹外事件
+2、https://aliyuque.antfin.com/mebsf2/vmfg0b/go0fge?#a37YK                           弹外事件
 
-3、https://aliyuque.antfin.com/mebsf2/vmfg0b/qen9ck?#acIp6     指令任务设计
+3、https://aliyuque.antfin.com/mebsf2/vmfg0b/qen9ck?#acIp6                           指令任务设计
 
-4、https://delivery.litongcx.com/iteration/webpack#19999            苍穹平台（打包用）
+4、https://delivery.litongcx.com/iteration/webpack#19999                             苍穹平台（打包用）
 
 5、https://aone.alibaba-inc.com                                                      anone平台需求与提BUG
 
-6、https://mail.alibaba-inc.com                                                       企业邮箱
+6、https://mail.alibaba-inc.com                                                      企业邮箱
 
-7、https://aliyuque.antfin.com/lcg01733115/kb/ro333yrorc76hrgx    VAE事件触发条件 语雀
+7、https://aliyuque.antfin.com/lcg01733115/kb/ro333yrorc76hrgx                       VAE事件触发条件 语雀
 
 查看崩溃日志：
