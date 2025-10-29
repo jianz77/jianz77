@@ -1,0 +1,29 @@
+## 启动环境
+cd /media/ssd/motion-track
+source /home/dog/work/unitree_ros2/setup.sh
+
+##  查看所需信号是否发出, 正常情况应该出现几十个信号名称类似/utlidar/voxel_map
+
+################ 终端1 ################
+ros2 topic list
+ros2 topic echo /test std_msgs/msg/String  # 单独信号通道，用于监控录制的开始和结束
+
+################ 终端2 ################
+## 重新开一个终端， 确定遥操所要做的动作后，先启动 录制命令(待补充信号类型)
+ros2 bag record /lowstate /lowcmd /sportmodestate /test
+
+################ 终端3 ################
+## 新开一个终端，同样初始化环境
+## 需要注意，输入下面指令之后，确保终端1中输出相应内容，再进行下一步操作
+ros2 topic pub /test --once std_msgs/msg/String 'data: "start:0"'
+ros2 topic pub /test --once std_msgs/msg/String 'data: "end:0"'
+
+## ctrl+C 结束录制
+##录制的数据是个文件夹， 其中会包含一个db后缀文件，一个yaml文件
+
+## 数据上传云端oss
+ossutil cp -r ${local_dir} ${target_dir}
+ossutil cp -r /media/ssd/motion-track/ oss://vlane/eai/general-motion-track-data/ -u
+
+前进，后退，趴下，站立，侧移，伸懒腰，挥手，（原地转圈）
+右侧移+趴下+站立+前进+握手+后退+伸懒腰

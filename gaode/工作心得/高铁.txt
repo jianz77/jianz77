@@ -3,3 +3,19 @@
 首次使用输入：adb connect 192.168.55.1:60055 连接设备  再用adb devices 查看设备
 如果还是连接不上用adb shell am force-stop com.sophon 杀一下进程 在重新安装APK
 高铁V1 视频录制路径：/storage/ext4_sdcard/Android/data/com.sophon/files/sophon/video/in
+
+
+九、高铁V1链接方式（每次重启设备后需要重复步骤3）：
+1.adb connect 192.168.55.1:60055
+2.adb shell adb_auth.sh
+如提示需输入密码：123
+3.如果步骤2不行，就有步骤3：ssh gaotie@192.168.55.1    然后adb shell进入
+
+八、高铁V2链接方式（每次重启设备后需要重复步骤2）：
+1.adb connect 192.168.55.1:60055
+2.adb shell adb_auth.sh
+如提示需输入密码：123
+3.如果步骤2不行，就有步骤3：ssh gaotie@192.168.55.1     然后adb shell进入
+4.高铁设备如果链接不上：以太网进入，更改ntertrnet协议版本4（TCP/ipv4）属性内的ip地址
+5.熄火别动电源线，把两个acc连上
+6.下发任务指令使用前端SN
