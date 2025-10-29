@@ -65,3 +65,10 @@ SophonRegister注册请求 = http://collection-bullet.amap.test/app/register
 7、https://aliyuque.antfin.com/lcg01733115/kb/ro333yrorc76hrgx                       VAE事件触发条件 语雀
 
 查看崩溃日志：
+
+
+adb shell 登录后输入：
+am broadcast  -a android.intent.action.FACTORY_RESET -f 0x10000000 -e android.intent.extra.REASON MasterClearConfirm --ez android.intent.extra.WIPE_EXTERNAL_STORAGE false --ez com.android.internal.intent.extra.WIPE_ESIMS true android
+执行命令后看设备是否重启  
+查看OTA进度 :logcat | grep update_eng
+ 前进，趴下，站立，侧移，伸懒腰，挥手。
